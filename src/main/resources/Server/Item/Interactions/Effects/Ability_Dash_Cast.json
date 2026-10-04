@@ -1,0 +1,43 @@
+{
+  "Type": "StatsCondition",
+  "UseAbilityCost": true,
+  "Failed": "Ability_Cast_Fail",
+  "Next": {
+    "Type": "Parallel",
+    "Interactions": [
+      {
+        "Interactions": [
+          { "Type": "TriggerCooldown", "UseAbilityCooldown": true },
+          null
+        ]
+      },
+      {
+        "Interactions": [
+          {
+            "Type": "ApplyForce",
+            "Force": 25.0,
+            "Direction": { "X": 0, "Y": 0.3, "Z": -3 },
+            "AdjustVertical": true,
+			"VerticalClamp": [-20, 20],
+            "ChangeVelocityType": "Set",
+            "WaitForGround": false,
+            "RunTime": 0.3,
+            "VelocityConfig": {
+              "AirResistance": 0.99,
+              "AirResistanceMax": 0.97,
+              "GroundResistance": 0.90,
+              "GroundResistanceMax": 0.75,
+              "Threshold": 3.0,
+              "Style": "Linear"
+            }
+          }
+        ]
+      },
+      {
+        "Interactions": [
+          { "Type": "ChangeStat", "UseAbilityCost": true }
+        ]
+      }
+    ]
+  }
+}

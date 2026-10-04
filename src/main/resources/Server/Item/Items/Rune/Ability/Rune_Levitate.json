@@ -1,0 +1,67 @@
+{
+	"IconProperties": {
+		"Scale": 0.75,
+		"Rotation": [
+			0,
+			30,
+			15
+		],
+		"Translation": [
+			4,
+			-18
+		]
+	},
+	"Ability": {
+		"Slot": "Core",
+		"Cooldown": 10,
+		"Cost": 35,
+		"CostType": "Mana",
+		"AbilityKeywords": ["Duration"],
+		"Attributes": {
+			"Duration": 5
+		},
+		"Cast": "Root_Ability_Levitate"
+	},
+	"Icon": "Icons/ItemsGenerated/Rune_Levitate.png",
+	"Categories": [
+		"Items.Ingredients"
+	],
+	"TranslationProperties": {
+		"Name": "server.items.Rune_Levitate.name",
+		"Description": "server.items.Rune_Levitate.description"
+	},
+	"ItemLevel": 15,
+	"MaxStack": 1,
+	"Quality": "Rare",
+	"ItemSoundSetId": "ISS_Items_Gems",
+	"Model": "Items/Runes/Rune_Ability.blockymodel",
+	"Scale": 0.8,
+	"Texture": "Items/Runes/Runes_Textures/Rune_Ability_Levitate.png",
+	"PlayerAnimationsId": "Item",
+	"Recipe": {
+		"Input": [
+			{
+				"ItemId": "Ingredient_Rune_Shard",
+				"Quantity": 3,
+				"Metadata": {}
+			}
+		],
+		"PrimaryOutput": {
+			"Metadata": {}
+		},
+		"BenchRequirement": [
+			{
+				"RequiredAugmentTags": [
+					"goblin_lab_power"
+				],
+				"Type": "Crafting",
+				"Id": "GoblinLab_Workbench",
+				"Categories": [
+					"GoblinLab_Runes"
+				]
+			}
+		],
+		"TimeSeconds": 1,
+		"KnowledgeRequired": false
+	}
+}

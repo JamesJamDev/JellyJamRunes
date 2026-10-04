@@ -1,0 +1,8 @@
+{
+	"ApplyConditions": [
+		{
+			"Id": "IsPlayer"
+		}
+	],
+	"Name": "Levitate"
+}

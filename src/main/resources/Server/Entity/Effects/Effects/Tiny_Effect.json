@@ -1,0 +1,16 @@
+{
+  "StatusEffectIcon": "Icons/ItemsGenerated/Tiny_Charm.png",
+  "OverlapBehavior": "Overwrite",
+  "Infinite": true,
+  "ModelChange": "PlayerTiny",
+  "RawStatModifiers": {
+    "Health": [
+      {
+        "Target": "Max",
+        "CalculationType": "Multiplicative",
+        "Amount": 0.5
+      }
+    ]
+  },
+  "Debuff": false
+}

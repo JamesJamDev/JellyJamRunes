@@ -1,0 +1,33 @@
+{
+  "Type": "Parallel",
+  "Interactions": [
+    {
+      "Interactions": [
+        {
+          "Type": "TriggerCooldown",
+          "UseAbilityCooldown": true
+        },
+        null
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Type": "ApplyEffect",
+          "EffectId": "LastStand_Effect",
+          "Entity": "User",
+          "ViewDistance": 0,
+          "CancelOnItemChange": false
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Type": "ChangeStat",
+          "UseAbilityCost": true
+        }
+      ]
+    }
+  ]
+}

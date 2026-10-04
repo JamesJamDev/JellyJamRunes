@@ -1,0 +1,65 @@
+{
+  "Type": "EffectCondition",
+  "EntityEffectIds": [
+    "Tiny_Effect"
+  ],
+  "Match": "None",
+  "Next": {
+    "Type": "StatsCondition",
+    "UseAbilityCost": true,
+    "Failed": "Ability_Cast_Fail",
+    "Next": {
+      "Type": "Parallel",
+      "Interactions": [
+        {
+          "Interactions": [
+            {
+              "Type": "TriggerCooldown",
+              "UseAbilityCooldown": true
+            },
+            null
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Type": "ApplyEffect",
+              "EffectId": "Tiny_Effect",
+              "Entity": "User"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Type": "ChangeStat",
+              "UseAbilityCost": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "Failed": {
+    "Type": "Parallel",
+    "Interactions": [
+      {
+        "Interactions": [
+          {
+            "Type": "TriggerCooldown",
+            "UseAbilityCooldown": true
+          },
+          null
+        ]
+      },
+      {
+        "Interactions": [
+          {
+            "Type": "ClearEntityEffect",
+            "EntityEffectId": "Tiny_Effect"
+          }
+        ]
+      }
+    ]
+  }
+}

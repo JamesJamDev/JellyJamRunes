@@ -1,0 +1,11 @@
+{
+  "StatModifiers": {
+    "Health": 100,
+    "Mana": 100,
+    "Stamina": 100
+  },
+  "ValueType": "Percent",
+  "OverlapBehavior": "Overwrite",
+  "Duration": 0.1,
+  "DamageCalculatorCooldown": 0
+}

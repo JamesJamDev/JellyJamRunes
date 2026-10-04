@@ -1,0 +1,75 @@
+{
+  "IconProperties": {
+    "Scale": 0.75,
+    "Rotation": [
+      0,
+      30,
+      15
+    ],
+    "Translation": [
+      4,
+      -18
+    ]
+  },
+  "Ability": {
+    "Slot": "Core",
+    "Cooldown": 120,
+    "Cost": 0,
+    "CostType": "Mana",
+    "AbilityKeywords": [
+      "Duration",
+      "Buff"
+    ],
+    "Attributes": {
+      "Duration": 3
+    },
+    "Cast": "Root_Ability_LastStand"
+  },
+  "Icon": "Icons/ItemsGenerated/Rune_LastStand.png",
+  "Categories": [
+    "Items.Ingredients"
+  ],
+  "TranslationProperties": {
+    "Name": "server.items.Rune_LastStand.name",
+    "Description": "server.items.Rune_LastStand.description"
+  },
+  "ItemLevel": 15,
+  "MaxStack": 1,
+  "Quality": "Legendary",
+  "ItemSoundSetId": "ISS_Items_Gems",
+  "Model": "Items/Runes/Rune_Ability.blockymodel",
+  "Scale": 0.8,
+  "Texture": "Items/Runes/Runes_Textures/Rune_Ability_LastStand.png",
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ingredient_Rune_Shard",
+        "Quantity": 6,
+        "Metadata": {}
+      },
+      {
+        "ItemId": "Weapon_Deployable_Healing_Totem",
+        "Quantity": 1,
+        "Metadata": {}
+      }
+    ],
+    "PrimaryOutput": {
+      "Metadata": {}
+    },
+    "BenchRequirement": [
+      {
+        "RequiredAugmentTags": [
+          "goblin_lab_power"
+        ],
+        "Type": "Crafting",
+        "Id": "GoblinLab_Workbench",
+        "Categories": [
+          "GoblinLab_Runes"
+        ]
+      }
+    ],
+    "TimeSeconds": 1,
+    "KnowledgeRequired": false
+  }
+}

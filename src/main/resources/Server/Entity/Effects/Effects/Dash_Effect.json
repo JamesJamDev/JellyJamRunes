@@ -1,0 +1,9 @@
+{
+	"ApplyConditions": [
+		{
+			"Id": "IsPlayer"
+		}
+	],
+	"Name": "Dash",
+	"Duration": 5
+}

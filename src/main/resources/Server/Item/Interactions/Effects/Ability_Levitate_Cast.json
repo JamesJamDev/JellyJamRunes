@@ -1,0 +1,58 @@
+{
+  "Type": "StatsCondition",
+  "UseAbilityCost": true,
+  "Failed": "Ability_Cast_Fail",
+  "Next": {
+    "Type": "Parallel",
+    "Interactions": [
+      {
+        "Interactions": [
+          {
+            "Type": "TriggerCooldown",
+            "UseAbilityCooldown": true
+          },
+          null
+        ]
+      },
+      {
+        "Type": "Serial",
+        "Interactions": [
+          {
+            "Type": "ApplyForce",
+            "Direction": {
+              "X": 0,
+              "Y": 1
+            },
+            "AdjustVertical": false,
+            "Force": 6,
+            "Duration": 5,
+            "DurationAttribute": "Duration",
+            "ChangeVelocityType": "Set",
+            "Settings": {
+              "Adventure": {
+                "AllowSkipOnClick": true
+              },
+              "Creative": {
+                "AllowSkipOnClick": true
+              }
+            },
+            "WaitForGround": false
+          }
+        ]
+      },
+      {
+        "Interactions": [
+          {
+            "Type": "ChangeStat",
+            "UseAbilityCost": true
+          }
+        ],
+        "Rules": {
+          "BlockedBy": [
+            "Primary"
+          ]
+        }
+      }
+    ]
+  }
+}
