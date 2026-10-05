@@ -21,7 +21,7 @@
     ],
     "Cast": "Root_Ability_Tiny"
   },
-  "Icon": "Icons/ItemsGenerated/Rune_Dash.png",
+  "Icon": "Icons/ItemsGenerated/Rune_Tiny.png",
   "Categories": [
     "Items.Ingredients"
   ],
@@ -35,7 +35,7 @@
   "ItemSoundSetId": "ISS_Items_Gems",
   "Model": "Items/Runes/Rune_Ability.blockymodel",
   "Scale": 0.8,
-  "Texture": "Items/Runes/Runes_Textures/Rune_Ability_Dash.png",
+  "Texture": "Items/Runes/Runes_Textures/Rune_Ability_Tiny.png",
   "PlayerAnimationsId": "Item",
   "Recipe": {
     "Input": [

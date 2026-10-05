@@ -1,5 +1,5 @@
 {
-  "StatusEffectIcon": "Icons/ItemsGenerated/Tiny_Charm.png",
+  "StatusEffectIcon": "Icons/ItemsGenerated/Rune_Tiny.png",
   "OverlapBehavior": "Overwrite",
   "Infinite": true,
   "ModelChange": "PlayerTiny",
