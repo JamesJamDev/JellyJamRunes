@@ -13,7 +13,7 @@
   },
   "Ability": {
     "Slot": "Core",
-    "Cooldown": 1,
+    "Cooldown": 1.12,
     "Cost": 25,
     "CostType": "Mana",
     "AbilityKeywords": [

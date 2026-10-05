@@ -105,31 +105,16 @@ public class TinyEffectWatcher extends EntityTickingSystem<EntityStore> {
         if (movement == null || playerRef == null) {
             return;
         }
-
-        /*
-         * Start from the player's ACTUAL default movement settings.
-         *
-         * This is important:
-         * - uses the world's configured MovementConfig
-         * - preserves mass
-         * - preserves dragCoefficient
-         * - preserves invertedGravity
-         * - preserves all normal falling/air movement values
-         */
+        
         MovementSettings settings =
                 new MovementSettings(
                         movement.getDefaultSettings()
                 );
 
-        /*
-         * Tiny only changes these two values.
-         */
+
         settings.baseSpeed *= 0.6f;
         settings.jumpForce *= 0.7f;
 
-        /*
-         * Make these settings the active MovementManager settings.
-         */
         try {
             MOVEMENT_SETTINGS_FIELD.set(
                     movement,
@@ -142,9 +127,7 @@ public class TinyEffectWatcher extends EntityTickingSystem<EntityStore> {
             return;
         }
 
-        /*
-         * Send the exact settings to the client.
-         */
+
         movement.update(
                 playerRef.getPacketHandler()
         );
@@ -166,13 +149,6 @@ public class TinyEffectWatcher extends EntityTickingSystem<EntityStore> {
             return;
         }
 
-        /*
-         * This does exactly what Hytale itself uses to restore
-         * normal movement.
-         *
-         * It also refreshes the defaults from the world's
-         * current PlayerConfig.
-         */
         movement.resetDefaultsAndUpdate(
                 ref,
                 store

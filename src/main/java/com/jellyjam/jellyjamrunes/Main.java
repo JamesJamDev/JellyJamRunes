@@ -1,6 +1,9 @@
 package com.jellyjam.jellyjamrunes;
 
 import com.hypixel.hytale.logger.HytaleLogger;
+import com.hypixel.hytale.protocol.packets.player.ClientMovement;
+import com.hypixel.hytale.server.core.io.adapter.PacketAdapters;
+import com.hypixel.hytale.server.core.io.adapter.PlayerPacketWatcher;
 import com.hypixel.hytale.server.core.modules.interaction.interaction.config.Interaction;
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
@@ -25,6 +28,12 @@ public class Main extends JavaPlugin {
 
         LOGGER.at(Level.INFO).log("Setting up JellyJamRunes!");
         this.getEntityStoreRegistry().registerSystem(new TinyEffectWatcher());
+
+        // Register Dash
+        this.getCodecRegistry(Interaction.CODEC).register("DirectionalLaunch", DirectionalLaunchInteraction.class, DirectionalLaunchInteraction.CODEC);
+
+        this.getCodecRegistry(Interaction.CODEC).register("Brake", BrakeInteraction.class, BrakeInteraction.CODEC);
+
     }
 
     @Override
