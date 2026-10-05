@@ -1,6 +1,7 @@
 package com.jellyjam.jellyjamrunes;
 
 import com.hypixel.hytale.logger.HytaleLogger;
+import com.hypixel.hytale.server.core.modules.interaction.interaction.config.Interaction;
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
 
@@ -21,11 +22,15 @@ public class Main extends JavaPlugin {
 
     @Override
     protected void setup() {
+
         LOGGER.at(Level.INFO).log("Setting up JellyJamRunes!");
+        this.getEntityStoreRegistry().registerSystem(new TinyEffectWatcher());
     }
 
     @Override
     protected void shutdown() {
         LOGGER.at(Level.INFO).log("Shutting down JellyJamRunes!");
     }
+
+
 }

@@ -20,9 +20,7 @@
   "MinScale": 0.2,
   "MaxScale": 0.2,
   "PhysicsValues": {
-    "Mass": 12,
-    "InvertedGravity": false,
-    "DragCoefficient": 0
+    "Mass": 68
   },
   "DetailBoxes": {
     "Head": [
